@@ -1,15 +1,9 @@
-package ctech.cursoJavaLoiane.aula39.teste;
-
-import ctech.cursoJavaLoiane.aula39.Pessoa;
+package ctech.cursoJavaLoiane.aula40;
 
 public class Aluno extends Pessoa {
     private String curso;
     private double[] notas;
 
-    public void modificarAcesso(){
-        //super.nome = "Teste";
-        //super.nomeVisibilidade = "TesteNomeVisibilidade";
-    }
     public Aluno() {
         super();
     }
@@ -41,5 +35,12 @@ public class Aluno extends Pessoa {
 
     public boolean verificarAprovado() {
         return true;
+    }
+
+    public String obterEtiquetaEndereco(){
+        String s = "Endereco do aluno: ";
+        s += super.getEndereco();
+
+        return s;
     }
 }
